@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: alem-da-taca-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: alem_da_taca
+      POSTGRES_PASSWORD: alem_da_taca
+      POSTGRES_DB: alem_da_taca
+    ports:
+      - '5432:5432'
+    volumes:
+      - alem-da-taca-db-data:/var/lib/postgresql/data
+
+volumes:
+  alem-da-taca-db-data:
