@@ -15,6 +15,7 @@
   "license": "ISC",
   "description": "API REST do Além da Taça",
   "dependencies": {
+    "@fastify/jwt": "^10.2.5",
     "@prisma/adapter-pg": "^7.10.0",
     "@prisma/client": "^7.10.0",
     "bcryptjs": "^3.0.3",
