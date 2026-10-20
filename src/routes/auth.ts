@@ -79,7 +79,7 @@ export async function authRoutes(app: FastifyInstance) {
     },
   )
 
-  app.get('/me', { preHandler: authenticate }, async (request, reply) => {
+  app.get('/auth/me', { preHandler: authenticate }, async (request, reply) => {
     const user = await prisma.user.findUnique({ where: { id: request.user.sub } })
 
     // Token válido, mas o usuário pode ter sido apagado depois que o token foi emitido.
